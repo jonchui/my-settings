@@ -1,0 +1,52 @@
+### added colors so when i call any diff, or even git add -p, for patching:
+
+[color]
+ui = auto
+[color "branch"]
+current = yellow reverse
+local = yellow
+remote = green
+[color "diff"]
+meta = yellow bold
+frag = magenta bold
+old = red bold
+new = green bold
+[color "status"]
+added = yellow
+changed = green
+untracked = cyan
+
+
+
+### macbook pro
+
+[gui]
+[gui]
+    recentrepo = /Users/jonchui/Desktop/Dropbox/OFFICIAL INVOKE DROPBOX/CODE/GIT/notationalVelocity
+    recentrepo = /CODE/AudioStreamer
+    recentrepo = /CODE/BeatMyRide
+    recentrepo = /CODE/sample/TestTwitterOAuthSend
+[user]
+	name = Jon Chui @ ChuiMac
+    email = jon.chui@gmail.com
+[alias]
+    ai = add --interactive
+    s = status
+    d = diff --word-diff=color
+    c = commit
+    cm = commit -m
+      cma = commit -a -m
+    cc = commit -am 
+    ca = commit --amend -C HEAD
+    caa = commit -a --amend -C HEAD
+    a = add
+    co = checkout
+    b = for k in `git branch|perl -pe s/^..//`;do echo -e `git show --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" $k|head -n 1`\\t$k;done|sort -r
+    l = log
+    f = fetch
+  r = reset
+  r1 = reset HEAD^
+  r2 = reset HEAD^^
+lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+h = reflog --date=local
+h2 = for k in `git branch|perl -pe s/^..//`;do echo -e `git show --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" $k|head -n 1`\\t$k;done|sort -r
