@@ -1,0 +1,2 @@
+supertab.vba: call delete('/home/wes/.vim/doc/supertab.txt')|call delete('/home/wes/.vim/plugin/supertab.vim')
+html5.vim-0.26.vba: call delete('/home/wes/.vim/autoload/xml/aria.vim')
