@@ -20,15 +20,6 @@ untracked = cyan
 
 ### macbook pro
 
-[gui]
-[gui]
-    recentrepo = /Users/jonchui/Desktop/Dropbox/OFFICIAL INVOKE DROPBOX/CODE/GIT/notationalVelocity
-    recentrepo = /CODE/AudioStreamer
-    recentrepo = /CODE/BeatMyRide
-    recentrepo = /CODE/sample/TestTwitterOAuthSend
-[user]
-    name = jonchui
-    email = jon.chui@gmail.com
 [alias]
     ai = add --interactive
     s = status
