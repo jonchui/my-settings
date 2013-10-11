@@ -35,10 +35,14 @@ untracked = cyan
     b = for k in `git branch|perl -pe s/^..//`;do echo -e `git show --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" $k|head -n 1`\\t$k;done|sort -r
     l = log
     f = fetch
-  r = reset
-  r1 = reset HEAD^
-  r2 = reset HEAD^^
-lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cblue%an%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
-lga = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cblue%an%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
-h = reflog --date=local
-h2 = for k in `git branch|perl -pe s/^..//`;do echo -e `git show --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" $k|head -n 1`\\t$k;done|sort -r
+    r = reset
+    r1 = reset HEAD^
+    r2 = reset HEAD^^
+    # Nice pretty tree, each commit on a line, 
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cblue%an%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+    lga = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cblue%an%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+    # History, using reflog
+    h = reflog --date=local
+    h2 = for k in `git branch|perl -pe s/^..//`;do echo -e `git show --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" $k|head -n 1`\\t$k;done|sort -r
+    # Last recently committed to branches
+    lb = for-each-ref --sort=-committerdate refs/heads/
